@@ -1,23 +1,31 @@
 <script setup>
-const dynamicStyles = {
-    bgcolor: '#F6F7F8'
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fontsource/poppins/100.css';
+import '@fontsource/poppins/200.css';
+import '@fontsource/poppins/300.css';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/800.css';
+import '@fontsource/poppins/900.css';
 </script>
 
+
 <template>
-    <div class="app">
-      <nav>
-        <RouterLink to="/">Home</RouterLink> |
+   <div class="app">
+     <nav>
+        <RouterLink to="/">home</RouterLink> |
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
-
+   </div>
   <RouterView />
 </template>
 
-
-<style lang="scss" scoped>
-div {
-    background-color: v-bind('dynamicStyles.bgcolor');
-}
+<style scoped>
+  .app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
