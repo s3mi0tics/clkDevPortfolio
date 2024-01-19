@@ -17,7 +17,7 @@ import Nav from './Nav.vue';
   
   <style lang="scss" scoped>
   .card-background {
-    display: block;
+    display: flex;
     position: relative;
     width: 1381px;
     height: 847px;
