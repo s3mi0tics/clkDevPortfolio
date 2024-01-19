@@ -19,29 +19,35 @@
                 Full-Stack
             </p>
         </div>
-        <div class="links svg-container">
-                <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Circle with red fill and black border -->
-                    <circle cx="22" cy="22" r="20" fill="#F1F4F6" />
-                </svg>
-                <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Circle with red fill and black border -->
-                    <circle cx="22" cy="22" r="20" fill="#F1F4F6" />
-                </svg>
-                <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Circle with red fill and black border -->
-                    <circle cx="22" cy="22" r="20" fill="#F1F4F6" />
-                </svg>
+        <div class="links">
+            <div class="icon-stack">
+                <i class="bi bi-circle-fill" style="font-size: 2.5rem; color: #F1F4F6"></i>
+                <i class="bi bi-suitcase-lg"></i>            
+            </div> 
         </div>
     </div>
 </template>
 
 
 <style lang="scss" scoped>
+.icon-stack {
+    position: relative;
+    display: flex;
+}
+
+.icon-stack > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.links {
+    display: flex;
+}
 .nav {
     display: flex;
     justify-content: space-between;
-    align-item: center;
+    align-items: center;
     position: relative;
     margin-top: 72px;
     margin-left: 65px;
@@ -50,7 +56,9 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
 }
-
+.svg-container > * {
+    margin-left: 16px;
+}
 .title {
     margin: 12px;
     display: flex;
@@ -62,14 +70,5 @@
     font-weight: 600;
     margin-left: 12px;
 }
-
-.links {
-    display: flex;
-}
-
-.svg-container > * {
-    margin-left: 16px;
-}
-
 
 </style>
