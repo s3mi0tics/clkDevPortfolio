@@ -1,6 +1,7 @@
 <script setup>
 import GreyArea from './GreyArea.vue';
 import Nav from './Nav.vue';
+import ProfileImage from './ProfileImage.vue';
 
 
 </script>
@@ -11,6 +12,7 @@ import Nav from './Nav.vue';
         <Nav />
       </div>
       <GreyArea />
+      <ProfileImage />
     </div>
 </template>
   
@@ -29,7 +31,7 @@ import Nav from './Nav.vue';
   
   .overlay-container {
     position: absolute;
-    width: 100%;
+    width: 1381px;
     height: 100%;
   }
   
