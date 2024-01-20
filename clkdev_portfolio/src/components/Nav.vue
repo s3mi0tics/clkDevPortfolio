@@ -1,40 +1,52 @@
 <script setup>
+import IconMail from './icons/IconMail.vue';
+import IconPerson from './icons/IconPerson.vue';
+import IconStar from './icons/IconStar.vue';
+import IconCircle from './icons/IconCircle.vue';
+import IconSuitcase from './icons/IconSuitcase.vue';
+
 
 </script>
 
 <template>
     <div class="nav">
         <div class="title">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21.729999542236328" height="22.935474395751953" viewBox="85.0 64.0 21.729999542236328 22.935474395751953" preserveAspectRatio="none"> 
-                <g>                      	    
-                    <defs>                      	      
-                        <path id="s-Path_167-26265" d="M98.09661253831736 64.0 L98.02361502722128 71.5475634558616 L104.53542234887644 67.73704914467064 L106.72999948811874 71.84070744029262 L100.14555314288395 75.43118442186514 L106.73 79.16787505482799 L104.5354228607577 83.2711748387422 L98.02361553910255 79.387911700916 L98.09661253831736 86.93547515677761 L93.70602669854611 86.93547515677761 L93.7793820413108 79.387911700916 L87.26793249800328 83.19770933045665 L85.0 79.16787505482799 L91.58480517400542 75.43118442186514 L85.0 71.8407070985274 L87.2679324553465 67.66394214809286 L93.78009758200979 71.54756311409639 L93.70674264981653 64.0 L98.09661253831736 64.0 Z "></path>                      	    
-                    </defs>                      	    
-                    <g style="mix-blend-mode:normal">                      	      
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#s-Path_167-26265" fill="#1EAAF1" fill-opacity="1.0"></use>                      	    
-                    </g>                      	  
-                </g>                      	
-            </svg>
+            <IconStar />
             <p class="title-text">
                 Full-Stack
             </p>
         </div>
         <div class="links">
-            <div class="icon-stack">
-                <i class="bi bi-circle-fill" style="font-size: 2.5rem; color: #F1F4F6"></i>
-                <i class="bi bi-suitcase-lg"></i>            
-            </div> 
-        </div>
+                <div class="icon-stack mx-3">
+                    <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
+                    <IconMail style="font-size: 1.5rem" />           
+                </div> 
+                <div class="icon">
+                    <div class="icon-stack mx-5">
+                        <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
+                        <IconPerson style="font-size: 1.5rem" />      
+                    </div> 
+                </div>
+               
+
+                <div class="icon-stack ms-3">
+                    <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
+                    <IconSuitcase style="font-size: 1.5rem" />     
+                </div> 
+        </div> 
     </div>
 </template>
 
 
 <style lang="scss" scoped>
+
+.icon {
+    position: relative;
+}
 .icon-stack {
     position: relative;
-    display: flex;
+    // margin-right: 60px;
 }
-
 .icon-stack > * {
     position: absolute;
     top: 50%;
@@ -47,17 +59,14 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
-    margin-top: 72px;
-    margin-left: 65px;
-    margin-right: 51px;
+    margin-top: 4.4%;
+    margin-left: 5%;
+    margin-right: 4.2%;
     font-size: 23px;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-}
-.svg-container > * {
-    margin-left: 16px;
 }
 .title {
     margin: 12px;
