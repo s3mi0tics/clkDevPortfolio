@@ -2,6 +2,7 @@
 import GreyArea from './GreyArea.vue';
 import Nav from './Nav.vue';
 import ProfileImage from './ProfileImage.vue';
+import Socials from './Socials.vue';
 
 
 </script>
@@ -13,6 +14,7 @@ import ProfileImage from './ProfileImage.vue';
       </div>
       <GreyArea />
       <ProfileImage />
+      <Socials />
     </div>
 </template>
   
@@ -31,7 +33,7 @@ import ProfileImage from './ProfileImage.vue';
   
   .overlay-container {
     position: absolute;
-    width: 1381px;
+    width: 100%;
     height: 100%;
   }
   

@@ -27,8 +27,6 @@ import IconSuitcase from './icons/IconSuitcase.vue';
                         <IconPerson style="font-size: 1.5rem" />      
                     </div> 
                 </div>
-               
-
                 <div class="icon-stack ms-3">
                     <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
                     <IconSuitcase style="font-size: 1.5rem" />     

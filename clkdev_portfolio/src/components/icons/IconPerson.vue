@@ -1,3 +1,3 @@
 <template>
 <i class="bi bi-person"></i>
-</template>
+</template> 
