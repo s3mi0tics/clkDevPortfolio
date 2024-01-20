@@ -9,8 +9,8 @@
 
 <style lang="scss" scoped>
 .grey-area {
-    width: 631px;
-    height: 847px;
+    width: 46%;
+    height: 100%;
     background: #F2F4F6;
     border-radius: 20px 0 0 20px;
 
