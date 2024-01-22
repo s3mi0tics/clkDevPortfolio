@@ -1,5 +1,6 @@
 <script setup>
 import GreyArea from './GreyArea.vue';
+import InfoPanel from './InfoPanel.vue';
 import Nav from './Nav.vue';
 import ProfileImage from './ProfileImage.vue';
 import Socials from './Socials.vue';
@@ -15,6 +16,7 @@ import Socials from './Socials.vue';
       <GreyArea />
       <ProfileImage />
       <Socials />
+      <InfoPanel />
     </div>
 </template>
   
