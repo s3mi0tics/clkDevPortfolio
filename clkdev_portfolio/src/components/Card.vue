@@ -3,7 +3,9 @@ import GreyArea from './GreyArea.vue';
 import InfoPanel from './InfoPanel.vue';
 import Nav from './Nav.vue';
 import ProfileImage from './ProfileImage.vue';
+import SelectSize from './SelectSize.vue';
 import Socials from './Socials.vue';
+
 
 
 </script>
@@ -17,6 +19,7 @@ import Socials from './Socials.vue';
       <ProfileImage />
       <Socials />
       <InfoPanel />
+      <SelectSize />
     </div>
 </template>
   
