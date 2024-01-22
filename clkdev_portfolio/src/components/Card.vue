@@ -4,6 +4,7 @@ import InfoPanel from './InfoPanel.vue';
 import Nav from './Nav.vue';
 import ProfileImage from './ProfileImage.vue';
 import SelectSize from './SelectSize.vue';
+import SelectColor from './SelectColor.vue'
 import Socials from './Socials.vue';
 
 
@@ -20,6 +21,7 @@ import Socials from './Socials.vue';
       <Socials />
       <InfoPanel />
       <SelectSize />
+      <SelectColor />
     </div>
 </template>
   
