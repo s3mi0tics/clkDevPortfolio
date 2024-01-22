@@ -20,10 +20,14 @@ import IconMailSocial from './icons/IconMailSocial.vue';
     flex-direction: column;
     position: absolute;
     left: 3.76%;
-    bottom: 3.75%;
+    bottom: 4%;
 }
 .socials > * {
-    margin-top: 15px;
-    color: #000000
+    margin-top: 12px;
+    color: #000000;
+}
+
+.socials > *:hover {
+    background: none;
 }
 </style>
