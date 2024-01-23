@@ -6,6 +6,7 @@ import ProfileImage from './ProfileImage.vue';
 import SelectSize from './SelectSize.vue';
 import SelectColor from './SelectColor.vue'
 import Socials from './Socials.vue';
+import ConnectButton from './ConnectButton.vue';
 
 
 
@@ -22,6 +23,7 @@ import Socials from './Socials.vue';
       <InfoPanel />
       <SelectSize />
       <SelectColor />
+      <ConnectButton />
     </div>
 </template>
   
