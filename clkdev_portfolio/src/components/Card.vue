@@ -8,12 +8,12 @@ import SelectColor from './SelectColor.vue'
 import Socials from './Socials.vue';
 import ConnectButton from './ConnectButton.vue';
 
-
-
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
 </script>
 
 <template>
-    <div class="card-background">
+    <div class="card-background" :style="{ background: store.getColorTheme.card }">
       <div class="overlay-container">
         <Nav />
       </div>
@@ -34,7 +34,6 @@ import ConnectButton from './ConnectButton.vue';
     position: relative;
     width: 1381px;
     height: 847px;
-    background: #ffffff;
     border-radius: 20px;
     box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
 

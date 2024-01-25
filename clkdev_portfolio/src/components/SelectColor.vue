@@ -1,6 +1,9 @@
 <script setup>
 import IconCircle from './icons/IconCircle.vue';
 import IconCheck from './icons/IconCheck.vue'
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
+console.log(store.getColorTheme)
 
 </script>
 
@@ -10,19 +13,19 @@ import IconCheck from './icons/IconCheck.vue'
             <h3 class="text">Select Color</h3>
         </div>
         <div class="color-icons">
-            <div class="icon-stack">
+            <div class="icon-stack" @click="store.changeColorTheme('dark')">
                 <IconCircle style="font-size: 2.5rem; color: #1d1f20;"/>
                 <IconCheck class="check" style="font-size:1.75rem" />
             </div>
-            <div class="icon-stack">
+            <div class="icon-stack" @click="store.changeColorTheme('blue')">
                 <IconCircle style="font-size: 2.5rem; color: #6ec8f0;"/>
                 <IconCheck class="check" style="font-size:1.75rem" />
             </div>
-            <div class="icon-stack">
+            <div class="icon-stack" @click="store.changeColorTheme('mint')">
                 <IconCircle style="font-size: 2.5rem; color: #98FFD3;"/>
                 <IconCheck class="check" style="font-size:1.75rem; color: #434343;" />
             </div>
-            <div class="icon-stack">
+            <div class="icon-stack" @click="store.changeColorTheme('light')">
                 <IconCircle style="font-size: 2.5rem; color: #F2F4F6;"/>
                 <IconCheck class="check" style="font-size:1.75rem; color: #434343;" />
             </div>
@@ -73,5 +76,13 @@ import IconCheck from './icons/IconCheck.vue'
     letter-spacing: 0.5px;
     text-transform: none;
     line-height: 23px;
+}
+
+.fe-block {
+    background: black;
+}
+.fe-block > * {
+    text-align: start;
+    color: white;
 }
 </style>

@@ -2,13 +2,15 @@
 import IconGitHub from './icons/IconGitHub.vue';
 import IconLinkedIn from './icons/IconLinkedIn.vue';
 import IconMailSocial from './icons/IconMailSocial.vue';
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
 </script>
 
 <template>
     <div class="socials">
-        <IconLinkedIn style="font-size: 1.1rem"/>
-        <IconMailSocial style="font-size: 1.1rem"/>
-        <IconGitHub style="font-size: 1.1rem"/>    
+        <IconLinkedIn style="font-size: 1.1rem" :style="{ color: store.getColorTheme.socials }" />
+        <IconMailSocial style="font-size: 1.1rem" :style="{ color: store.getColorTheme.socials }" />
+        <IconGitHub style="font-size: 1.1rem" :style="{ color: store.getColorTheme.socials }" />    
     </div>
 </template>
 
@@ -24,7 +26,7 @@ import IconMailSocial from './icons/IconMailSocial.vue';
 }
 .socials > * {
     margin-top: 12px;
-    color: #000000;
+
 }
 
 .socials > *:hover {

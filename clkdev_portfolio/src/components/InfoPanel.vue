@@ -1,18 +1,19 @@
 <script setup>
 import IconArrowRight from './icons/IconArrowRight.vue';
-
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
 
 </script>
 
 <template>
     <div class="info-panel">
-        <h2 class="description">
+        <h2 class="description" :style="{color: store.getColorTheme.paragraph}">
             software engineer
         </h2>
-        <h1 class="heading">
+        <h1 class="heading" :style="{color: store.getColorTheme.title}">
             Colby Kauk
         </h1>
-        <h3 class="paragraph">
+        <h3 class="paragraph" :style="{color: store.getColorTheme.paragraph}">
             Crafting dynamic, elegent designs that enhance and elevate the experience for you, your users, and all of humanity.
         </h3>
         <div class="money-arrow">
@@ -34,7 +35,6 @@ import IconArrowRight from './icons/IconArrowRight.vue';
 }
 .description {
     text-transform: uppercase;
-    color: #8d9697;
     font-family: Poppins, Arial; 
     font-size: 11.25pt;
     font-weight: 400;

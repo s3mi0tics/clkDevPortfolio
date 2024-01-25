@@ -5,8 +5,9 @@ import IconSquare from './icons/IconSquare.vue';
 import IconLaptop from './icons/IconLaptop.vue';
 import IconTablet from './icons/IconTablet.vue';
 import IconPhone from './icons/IconPhone.vue';
-
 import IconWatch from './icons/IconWatch.vue';
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
 
 </script>
 
@@ -17,24 +18,24 @@ import IconWatch from './icons/IconWatch.vue';
         </div>
         <div class="size-icons">
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;"/>
-                <IconComputer />
+                <IconSquare style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
+                <IconComputer :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;"/>
-                <IconLaptop class="icon"/>
+                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
+                <IconLaptop class="icon" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;"/>
-                <IconTablet class="icon"/>
+                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
+                <IconTablet class="icon" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;"/>
-                <IconPhone class="icon"/>
+                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
+                <IconPhone class="icon" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;"/>
-                <IconWatch class="icon"/>
+                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
+                <IconWatch class="icon" :style="{ fill: store.getColorTheme.socials}" />
             </div>
         </div>
     </div>
@@ -56,11 +57,6 @@ import IconWatch from './icons/IconWatch.vue';
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.icon {
-    color: #434343;
-}
-
 .size-icons {
     display: flex;
 
@@ -69,9 +65,6 @@ import IconWatch from './icons/IconWatch.vue';
     position: absolute;
     margin-top: 33.5%;
     margin-left: 58%;
-}
-.square {
-    color: #cccccc
 }
 .text {
     color: #000000;

@@ -4,32 +4,33 @@ import IconPerson from './icons/IconPerson.vue';
 import IconStar from './icons/IconStar.vue';
 import IconCircle from './icons/IconCircle.vue';
 import IconSuitcase from './icons/IconSuitcase.vue';
-
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
 
 </script>
 
 <template>
     <div class="nav">
         <div class="title">
-            <IconStar />
-            <p class="title-text">
+            <IconStar :style="{ fill: store.getColorTheme.star }"/>
+            <p class="title-text" :style="{ color: store.getColorTheme.title }">
                 Full-Stack
             </p>
         </div>
         <div class="links">
                 <div class="icon-stack mx-3">
-                    <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
-                    <IconMail style="font-size: 1.5rem" />           
+                    <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
+                    <IconMail style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />           
                 </div> 
                 <div class="icon">
                     <div class="icon-stack mx-5">
-                        <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
-                        <IconPerson style="font-size: 1.5rem" />      
+                        <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
+                        <IconPerson style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />      
                     </div> 
                 </div>
                 <div class="icon-stack ms-3">
-                    <IconCircle style="font-size: 2.75rem; color: #F1F4F6" />
-                    <IconSuitcase style="font-size: 1.5rem" />     
+                    <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
+                    <IconSuitcase style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />     
                 </div> 
         </div> 
     </div>

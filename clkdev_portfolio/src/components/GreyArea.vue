@@ -1,11 +1,14 @@
+<script setup>
+import { useColorThemeStore } from '@/stores/colorThemeStore';
+const store = useColorThemeStore()
+
+</script>
+
 <template>
-    <div class="grey-area">
+    <div class="grey-area" :style="{ background: store.getColorTheme.area }">
     </div>
 </template>
 
-<script setup>
-
-</script>
 
 <style lang="scss" scoped>
 .grey-area {
