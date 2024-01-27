@@ -2,9 +2,7 @@
 import IconCircle from './icons/IconCircle.vue';
 import IconCheck from './icons/IconCheck.vue'
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-const store = useColorThemeStore()
-console.log(store.getColorTheme)
-
+const colorStore = useColorThemeStore()
 </script>
 
 <template>
@@ -13,19 +11,19 @@ console.log(store.getColorTheme)
             <h3 class="text">Select Color</h3>
         </div>
         <div class="color-icons">
-            <div class="icon-stack" @click="store.changeColorTheme('dark')">
+            <div class="icon-stack" @click="colorStore.changeColorTheme('dark')">
                 <IconCircle style="font-size: 2.5rem; color: #1d1f20;"/>
                 <IconCheck class="check" style="font-size:1.75rem" />
             </div>
-            <div class="icon-stack" @click="store.changeColorTheme('blue')">
+            <div class="icon-stack" @click="colorStore.changeColorTheme('blue')">
                 <IconCircle style="font-size: 2.5rem; color: #6ec8f0;"/>
                 <IconCheck class="check" style="font-size:1.75rem" />
             </div>
-            <div class="icon-stack" @click="store.changeColorTheme('mint')">
+            <div class="icon-stack" @click="colorStore.changeColorTheme('mint')">
                 <IconCircle style="font-size: 2.5rem; color: #98FFD3;"/>
                 <IconCheck class="check" style="font-size:1.75rem; color: #434343;" />
             </div>
-            <div class="icon-stack" @click="store.changeColorTheme('light')">
+            <div class="icon-stack" @click="colorStore.changeColorTheme('light')">
                 <IconCircle style="font-size: 2.5rem; color: #F2F4F6;"/>
                 <IconCheck class="check" style="font-size:1.75rem; color: #434343;" />
             </div>
@@ -64,7 +62,7 @@ console.log(store.getColorTheme)
 }
 .select-color {
     position: absolute;
-    margin-top: 40%;
+    margin-top: 41%;
     margin-left: 58%;
 }
 .text {

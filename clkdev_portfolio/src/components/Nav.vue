@@ -5,32 +5,34 @@ import IconStar from './icons/IconStar.vue';
 import IconCircle from './icons/IconCircle.vue';
 import IconSuitcase from './icons/IconSuitcase.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-const store = useColorThemeStore()
+import { usePagesStore } from '@/stores/pagesStore';
+const colorStore = useColorThemeStore()
+const pagesStore = usePagesStore()
 
 </script>
 
 <template>
     <div class="nav">
         <div class="title">
-            <IconStar :style="{ fill: store.getColorTheme.star }"/>
-            <p class="title-text" :style="{ color: store.getColorTheme.title }">
-                Full-Stack
+            <IconStar :style="{ fill: colorStore.getColorTheme.star }"/>
+            <p class="title-text" :style="{ color: colorStore.getColorTheme.title }">
+                {{ pagesStore.getPage.title }}
             </p>
         </div>
         <div class="links">
                 <div class="icon-stack mx-3">
-                    <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
-                    <IconMail style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />           
+                    <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
+                    <IconMail style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
                 </div> 
                 <div class="icon">
                     <div class="icon-stack mx-5">
-                        <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
-                        <IconPerson style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />      
+                        <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
+                        <IconPerson style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />      
                     </div> 
                 </div>
                 <div class="icon-stack ms-3">
-                    <IconCircle style="font-size: 2.75rem;" :style="{ color: store.getColorTheme.area }" />
-                    <IconSuitcase style="font-size: 1.5rem" :style="{ color: store.getColorTheme.icon}" />     
+                    <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
+                    <IconSuitcase style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />     
                 </div> 
         </div> 
     </div>
@@ -71,6 +73,7 @@ const store = useColorThemeStore()
     margin: 12px;
     display: flex;
     align-items: baseline;
+    text-transform: capitalize;
 }
 
 .title-text {

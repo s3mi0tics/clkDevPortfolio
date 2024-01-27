@@ -1,37 +1,52 @@
 <script setup>
 import IconArrowRight from './icons/IconArrowRight.vue';
+import IconArrowLeft from './icons/IconArrowLeft.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-const store = useColorThemeStore()
+import { usePagesStore } from '@/stores/pagesStore';
+const colorStore = useColorThemeStore()
+const pageStore = usePagesStore()
+
 
 </script>
 
 <template>
     <div class="info-panel">
-        <h2 class="description" :style="{color: store.getColorTheme.paragraph}">
-            software engineer
+        <h2 class="description" :style="{color: colorStore.getColorTheme.paragraph}">
+            {{pageStore.getPage.subtitle}}
         </h2>
-        <h1 class="heading" :style="{color: store.getColorTheme.title}">
-            Colby Kauk
+        <h1 class="heading" :style="{color: colorStore.getColorTheme.title}">
+            {{pageStore.getPage.name}}
         </h1>
-        <h3 class="paragraph" :style="{color: store.getColorTheme.paragraph}">
-            Crafting dynamic, elegent designs that enhance and elevate the experience for you, your users, and all of humanity.
+        <h3 class="paragraph" :style="{color: colorStore.getColorTheme.paragraph}">
+            {{pageStore.getPage.paragraph}}
         </h3>
-        <div class="money-arrow">
-            <div class="money">
+        <div class="arrows">
+            <div class="arrow-left" @click="pageStore.previousPage(pageStore.getPage.id)">
+                <IconArrowLeft class="arrow-left" />
             </div>
-            <div class="flex-end throb">
+            <div class="arrow-right" @click="pageStore.nextPage(pageStore.getPage.id)">
                 <IconArrowRight class="arrow-right" />
             </div>
-
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .arrow-right {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #8B8D9A;
+    cursor: pointer;
+    padding-top: 0px;
+}
+.arrow-left {
+    font-size: 2rem;
+    color: #8B8D9A;
+    cursor: pointer;
 }
 .description {
     text-transform: uppercase;
@@ -41,9 +56,10 @@ const store = useColorThemeStore()
     line-height: 21px;
 }
 
-.flex-end {
+.arrow-right {
     display: flex;
     justify-content: flex-end;
+    cursor: pointer;
 }
 .heading {
     text-transform: uppercase;
@@ -60,24 +76,9 @@ const store = useColorThemeStore()
     margin-left: 58%;
     width: 388px;
 }
-.money{
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Poppins_20.0.0_google',Arial;
-    font-size: 18.75pt;
-    font-style: italic;
-    font-weight: 700;
-    text-transform: none;
-    line-height: 31px;
-    align-self: flex-end;
-}
 
-.money-arrow{
-    display: flex;
-    justify-content: space-between;
-}
 .paragraph {
-    height: 164px;
+    height: 204px;
     color: #8B8D9A;
     text-decoration: none;
     font-family: 'Poppins_20.0.0_google',Arial;
@@ -85,20 +86,14 @@ const store = useColorThemeStore()
     font-weight: 400;
     text-transform: none;
     line-height: 23px;
+    overflow: hidden;
+    overflow-x: hidden;
 }
 
-@keyframes throbbing {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.015);
-    }
-    100% {
-        transform: scale(1);
-    }
+::-webkit-scrollbar-track {
+    background-color: transparent;
 }
-.throb {
-    animation: throbbing 1s infinite;
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 </style>

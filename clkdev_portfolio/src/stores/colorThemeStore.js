@@ -57,4 +57,3 @@ export const useColorThemeStore = defineStore('colorTheme', () => {
 
   return { colorTheme, getColorTheme, changeColorTheme }
 })
-
