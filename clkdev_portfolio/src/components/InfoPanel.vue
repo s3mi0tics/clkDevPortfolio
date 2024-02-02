@@ -19,13 +19,14 @@ const pageStore = usePagesStore()
             {{pageStore.getPage.name}}
         </h1>
         <h3 class="paragraph" :style="{color: colorStore.getColorTheme.paragraph}">
-            {{pageStore.getPage.paragraph}}
+            {{pageStore.getPage.paragraph}} <a :style="{color: colorStore.getColorTheme.socials}" href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
         </h3>
         <div class="arrows">
-            <div class="arrow-left" @click="pageStore.previousPage(pageStore.getPage.id)">
+            <div v-if="pageStore.getIndex > 0" class="arrow-left" @click="pageStore.previousPage(pageStore.getPage.id)">
                 <IconArrowLeft class="arrow-left" />
             </div>
-            <div class="arrow-right" @click="pageStore.nextPage(pageStore.getPage.id)">
+            <div v-else></div>
+            <div v-if="pageStore.getIndex < pageStore.lastPage" class="arrow-right" @click="pageStore.nextPage(pageStore.getPage.id)">
                 <IconArrowRight class="arrow-right" />
             </div>
         </div>

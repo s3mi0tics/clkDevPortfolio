@@ -37,6 +37,14 @@ const pages = [
     title: 'biography',
     name: 'colby kauk',
     paragraph: "Today, my journey continues as I build and refine websites for clients, marrying precision coding with a keen eye for design and data itegrity. As the chapters unfold, I'm excited about the possibilities that lie ahead, the technologies yet to be explored, and the ever-evolving landscape of programming that keeps me fueled with curiosity and passion. I'm a creator on a quest for knowledge and the betterment of human kind. "
+  },
+  {
+    id: 'portfolio',
+    subtitle: 'SQL, Python, FLASK, Bootstrap',
+    title: 'portfolio',
+    name: 'installOps',
+    paragraph: 'This is my final project for Harvard’s CS50. InstallOps is a Helpdesk web application designed to help a manager schedule the deliveries of products and services of a blind installation operation. The tech stack used includes Python, leveraging the Flask framework for a robust backend. Stylishly designed using Bootstrap, ensuring a seamless and responsive user interface. Executed with all custom SQLite3 schema, tables, and queries showcasing a mastery of database fundamentals.',
+    link: 'Explore the code here'
   }
 ]
 
