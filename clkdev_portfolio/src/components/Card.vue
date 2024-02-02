@@ -9,11 +9,11 @@ import Socials from './Socials.vue';
 import ConnectButton from './ConnectButton.vue';
 
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-const store = useColorThemeStore()
+const colorStore = useColorThemeStore()
 </script>
 
 <template>
-    <div class="card-background" :style="{ background: store.getColorTheme.card }">
+    <div class="card-background" :style="{ background: colorStore.getColorTheme.card }">
       <div class="overlay-container">
         <Nav />
       </div>
