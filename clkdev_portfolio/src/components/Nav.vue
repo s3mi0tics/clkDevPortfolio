@@ -20,20 +20,20 @@ const pagesStore = usePagesStore()
             </p>
         </div>
         <div class="links">
+            <a href="mailto:colby.kauk@gmail.com">
                 <div class="icon-stack mx-3">
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                     <IconMail style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
                 </div> 
-                <div class="icon">
-                    <div class="icon-stack mx-5">
-                        <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
-                        <IconPerson style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />      
-                    </div> 
-                </div>
-                <div class="icon-stack ms-3">
-                    <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
-                    <IconSuitcase style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />     
-                </div> 
+            </a>
+            <div class="icon-stack mx-5" @click="pagesStore.changePageById('biography')">
+                <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
+                <IconPerson style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />      
+            </div> 
+            <div class="icon-stack ms-3" @click="pagesStore.changePageById('portfolio')">
+                <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
+                <IconSuitcase style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />     
+            </div> 
         </div> 
     </div>
 </template>
