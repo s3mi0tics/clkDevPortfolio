@@ -1,5 +1,5 @@
 <script setup>
-import IconMail from './icons/IconMail.vue';
+import IconHome from './icons/IconHome.vue';
 import IconPerson from './icons/IconPerson.vue';
 import IconStar from './icons/IconStar.vue';
 import IconCircle from './icons/IconCircle.vue';
@@ -23,7 +23,7 @@ const pagesStore = usePagesStore()
             <a href="mailto:colby.kauk@gmail.com">
                 <div class="icon-stack mx-3">
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
-                    <IconMail style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
+                    <IconHome style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
                 </div> 
             </a>
             <div class="icon-stack mx-5" @click="pagesStore.changePageById('biography')">
