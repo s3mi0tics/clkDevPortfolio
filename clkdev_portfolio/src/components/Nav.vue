@@ -20,12 +20,10 @@ const pagesStore = usePagesStore()
             </p>
         </div>
         <div class="links">
-            <a href="mailto:colby.kauk@gmail.com">
-                <div class="icon-stack mx-3">
+                <div class="icon-stack mx-3" @click="pagesStore.changePageById('home')">
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                     <IconHome style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
                 </div> 
-            </a>
             <div class="icon-stack mx-5" @click="pagesStore.changePageById('biography')">
                 <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                 <IconPerson style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />      
