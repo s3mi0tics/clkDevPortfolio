@@ -2,12 +2,9 @@
 import IconArrowRight from './icons/IconArrowRight.vue';
 import IconArrowLeft from './icons/IconArrowLeft.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-import { usePagesStore } from '@/stores/pagesStore';
 const colorStore = useColorThemeStore()
+import { usePagesStore } from '@/stores/pagesStore';
 const pageStore = usePagesStore()
-
-
-
 </script>
 
 <template>

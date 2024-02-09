@@ -7,8 +7,8 @@ import IconMail from './icons/IconMail.vue';
 
 <template>
 <button id="connect-button">
-    <IconMail />
-    Connect with me!
+    <IconMail  class="me-2" style="font-size: 1.25rem" />
+    <div class="h7">Connect with me!</div>
 </button>
 </template>
 
@@ -30,6 +30,14 @@ import IconMail from './icons/IconMail.vue';
     font-size: 10.5pt;
     font-weight: 400;
     text-transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.h7 {
+    font-size: 0.5;
 }
 
 </style>
