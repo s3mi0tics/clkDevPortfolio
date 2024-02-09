@@ -2,13 +2,14 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 
-const pages = [  
+const pages = [
   {
     id: 'home',
     subtitle: 'software engineer',
     title: 'full-stack',
     name: 'colby kauk',
     paragraph: 'Crafting dynamic, scalable, and elegant designs to enhance your experience',
+    photo: 'profile.png'
   },  
   {
     id: 'biography',
