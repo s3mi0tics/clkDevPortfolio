@@ -2,7 +2,7 @@
 import GreyArea from './GreyArea.vue';
 import InfoPanel from './InfoPanel.vue';
 import Nav from './Nav.vue';
-import ProfileImage from './ProfileImage.vue';
+import Carousel from './Carousel.vue';
 import SelectSize from './SelectSize.vue';
 import SelectColor from './SelectColor.vue'
 import Socials from './Socials.vue';
@@ -18,7 +18,7 @@ const colorStore = useColorThemeStore()
         <Nav />
       </div>
       <GreyArea />
-      <ProfileImage />
+      <Carousel />
       <Socials />
       <InfoPanel />
       <SelectSize />
