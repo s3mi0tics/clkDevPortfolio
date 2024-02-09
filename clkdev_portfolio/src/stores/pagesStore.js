@@ -9,7 +9,7 @@ const pages = [
     title: 'full-stack',
     name: 'colby kauk',
     paragraph: 'Crafting dynamic, scalable, and elegant designs to enhance your experience',
-    photo: 'profile.png'
+    images: ['profile.png']
   },  
   {
     id: 'biography',

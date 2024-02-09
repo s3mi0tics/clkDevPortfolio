@@ -9,7 +9,9 @@ const getImgUrl = (name) => {
 </script>
 
 <template>
-        <img class="image" :src="getImgUrl(pageStore.getPage.photo)" alt="face profile" />
+    <div v-for="(item, index) of pageStore.getPage.images" :key="index">
+        <img class="image" :src="getImgUrl(item)" alt="face profile" />
+    </div>
 </template>
 
 
