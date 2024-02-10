@@ -1,5 +1,6 @@
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
+import { usePagesStore } from './pagesStore';
 
 const imageSets = {
   home: {
@@ -18,9 +19,13 @@ const imageSets = {
     ],
   },  
   biography: {
-    id: 'biography',
-    images: ['openArms.png'],
-    imgStyle: 'height: 72%; bottom: 0px;'
+    images: [
+      {
+        img: 'openArms.png', 
+        alt: 'photo of open arms',
+        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+      }
+    ],
   },
 
   portfolio: {
@@ -33,6 +38,8 @@ const imageSets = {
 
 
 export const useImagesStore = defineStore('images', () => {
+  const pageStore = usePagesStore()
+  console.log(pageStore.getPage.id)
   const imageSet = ref(imageSets["home"])
   const index = ref(0) 
   const direction = ref('slide-out')
@@ -80,6 +87,13 @@ export const useImagesStore = defineStore('images', () => {
     }
   }
 
+  watch(
+    () => pageStore.getPage.id,
+    (newPageId) => {
+      // Update imageSet based on newPageId
+      imageSet.value = imageSets[newPageId] || imageSets["home"];
+    }
+  );
   
     return {  getImageSet, getImage, getIndex, getDirection, prevImage, stopSlideTimer, startSlideTimer, switchSlide };
   });
