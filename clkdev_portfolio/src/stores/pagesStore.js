@@ -62,7 +62,6 @@ export const usePagesStore = defineStore('pages', () => {
   }
 
   function nextPage(id) {
-    console.log(index.value)
     let i = pages.findIndex(page => page.id === id)
     i ++
     index.value = (i < 0) ? 0 : (i > lastPage) ? lastPage : i;
@@ -70,7 +69,6 @@ export const usePagesStore = defineStore('pages', () => {
   }
 
   function previousPage(id) {
-    console.log(index.value)
     let i = pages.findIndex(page => page.id === id)
     i --
     index.value = (i < 0) ? 0 : (i > lastPage) ? lastPage : i;

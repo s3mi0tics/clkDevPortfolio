@@ -3,7 +3,6 @@ import IconCircle from './icons/IconCircle.vue';
 import IconCheck from './icons/IconCheck.vue'
 import { useColorThemeStore } from '@/stores/colorThemeStore';
 const colorStore = useColorThemeStore()
-console.log(colorStore.getColorTheme)
 </script>
 
 <template>
