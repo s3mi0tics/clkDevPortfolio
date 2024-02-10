@@ -1,7 +1,5 @@
 <script setup>
 import { useImagesStore } from '@/stores/imagesStore';
-import CarouselItem from './CarouselItem.vue';
-import { onBeforeUnmount, onMounted } from 'vue';
 const imageStore = useImagesStore()
 console.log(imageStore.getIndex)
 
@@ -11,7 +9,6 @@ const getImgUrl = (name) => {
     return new URL(`../assets/${name}`, import.meta.url).href;
 };
 
-imageStore.startSlideTimer()
 
 </script>
 

@@ -2,6 +2,8 @@ import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { usePagesStore } from './pagesStore';
 
+const screenshotStyle = 'height: 50%; border-radius: 6px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; cursor: pointer;'
+
 const imageSets = {
   home: {
     id: 'home',
@@ -30,16 +32,32 @@ const imageSets = {
 
   portfolio: {
     id: 'portfolio',
-    images: ['opsScheduleJob.png'],
-    imgStyle: 'height: 50%; border-radius: 3px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);'
-
+    images: [
+      {
+        img: 'opsHome.png',
+        alt: 'screenshot showing home page',
+        style: screenshotStyle      },
+      {
+        img: 'opsNewJob.png',
+        alt: 'screenshot showing new job modal',
+        style: screenshotStyle      },
+      {
+        img: 'opsJobDetails.png',
+        alt: 'screenshot showing job details',
+        style: 'height: 50%; border-radius: 3px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%'
+      },
+      {
+        img: 'opsScheduleJob.png',
+        alt: 'screenshot showing the scheduling modal',
+        style: screenshotStyle
+      }
+    ]
   },
 }
 
 
 export const useImagesStore = defineStore('images', () => {
   const pageStore = usePagesStore()
-  console.log(pageStore.getPage.id)
   const imageSet = ref(imageSets["home"])
   const index = ref(0) 
   const direction = ref('slide-out')
