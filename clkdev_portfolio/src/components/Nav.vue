@@ -66,6 +66,7 @@ const pagesStore = usePagesStore()
     font-size: 23px;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
+    z-index: 20;
 }
 .title {
     margin: 12px;
