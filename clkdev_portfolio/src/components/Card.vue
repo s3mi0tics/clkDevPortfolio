@@ -36,7 +36,6 @@ const colorStore = useColorThemeStore()
     height: 847px;
     border-radius: 20px;
     box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
-
   }
   
   .overlay-container {
