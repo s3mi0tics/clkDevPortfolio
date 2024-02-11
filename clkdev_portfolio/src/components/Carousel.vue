@@ -9,14 +9,10 @@ const getImgUrl = (name) => {
     return new URL(`../assets/${name}`, import.meta.url).href;
 };
 
-
 </script>
 
-<template>
-    <div v-if="imageStore.getImageSet.images.length === 1">
-        <img class="image" :src="getImgUrl(imageStore.getImageSet.images[0].img)" :alt="imageStore.getImageSet.images[0].alt" :style="imageStore.getImageSet.images[0].style"/>
-    </div>    
-    <div v-else v-for="(image, index) in imageStore.getImageSet.images" :key="`${image.img}-${index}`">
+<template>   
+    <div v-for="(image, index) in imageStore.getImageSet.images" :key="`${image.img}-${index}`">
         <transition :name="imageStore.getDirection">
             <img 
                 v-show="index === imageStore.getIndex" 
@@ -44,18 +40,22 @@ const getImgUrl = (name) => {
 }
 
 .slide-in-enter-from {
-  transform: translateX(-100%)
+  transform: translateY(-100%);
+  opacity: 0;
 }
 
 .slide-in-leave-to {
-  transform: translateX(100%)
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .slide-out-enter-from {
-  transform: translateX(100%)
+  transform: translateY(100%);
+  opacity: 0;
 }
 
 .slide-out-leave-to {
-  transform: translateX(-100%)
+  transform: translateY(-100%);
+  opacity: 0;
 }
 </style>

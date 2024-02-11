@@ -2,7 +2,7 @@ import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { usePagesStore } from './pagesStore';
 
-const screenshotStyle = 'height: 50%; border-radius: 6px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; cursor: pointer;'
+const screenshotStyle = 'height: 50%; width: 43.5%; border-radius: 6px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; cursor: pointer;'
 
 const imageSets = {
   home: {
@@ -12,12 +12,7 @@ const imageSets = {
         img: 'profile.png', 
         alt: 'face profile', 
         style: 'height: 86%; bottom: 0px; left:17%; cursor: pointer'
-      }, 
-      {
-        img: 'openArms.png', 
-        alt: 'photo of open arms',
-        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
-      }
+      },  
     ],
   },  
   biography: {
@@ -29,7 +24,33 @@ const imageSets = {
       }
     ],
   },
-
+  biography2: {
+    images: [
+      {
+        img: 'openArms.png', 
+        alt: 'photo of open arms',
+        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+      }
+    ],
+  },
+  biography3: {
+    images: [
+      {
+        img: 'openArms.png', 
+        alt: 'photo of open arms',
+        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+      }
+    ],
+  },
+  biography4: {
+    images: [
+      {
+        img: 'openArms.png', 
+        alt: 'photo of open arms',
+        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+      }
+    ],
+  },
   portfolio: {
     id: 'portfolio',
     images: [
@@ -44,10 +65,10 @@ const imageSets = {
       {
         img: 'opsJobDetails.png',
         alt: 'screenshot showing job details',
-        style: 'height: 50%; border-radius: 3px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%'
+        style: screenshotStyle
       },
       {
-        img: 'opsScheduleJob.png',
+        img: 'opsSchedule.png',
         alt: 'screenshot showing the scheduling modal',
         style: screenshotStyle
       }
@@ -61,13 +82,14 @@ export const useImagesStore = defineStore('images', () => {
   const imageSet = ref(imageSets["home"])
   const index = ref(0) 
   const direction = ref('slide-out')
-  const lastIndex = imageSet.value.images.length - 1
+  const lastIndex = ref(imageSet.value.images.length - 1)
   const slideInterval = ref(3500)
   
   const getImageSet = computed(() => imageSet.value)
   const getImage = computed(() => imageSet.value.images[index.value])
   const getIndex = computed(() => index.value)
   const getDirection = computed (() => direction.value)
+  const getLastIndex = computed (() => lastIndex.value)
 
   function prevImage (step = -1) {
     const newIndex = index.value > 0 ? index.value + step : lastIndex
@@ -75,7 +97,8 @@ export const useImagesStore = defineStore('images', () => {
   }
 
   function _nextImage(step = 1) {
-    const newIndex = index.value < lastIndex ? index.value + step : 0;
+    lastIndex.value = getImageSet.value.images.length -1
+    const newIndex = index.value < lastIndex.value ? index.value + step : 0;
     index.value = newIndex
   }
 
@@ -108,11 +131,15 @@ export const useImagesStore = defineStore('images', () => {
   watch(
     () => pageStore.getPage.id,
     (newPageId) => {
+
       // Update imageSet based on newPageId
       imageSet.value = imageSets[newPageId] || imageSets["home"];
+      if (lastIndex.value > 0) {
+        startSlideTimer()
+      }
     }
   );
   
-    return {  getImageSet, getImage, getIndex, getDirection, prevImage, stopSlideTimer, startSlideTimer, switchSlide };
+    return {  getImageSet, getImage, getIndex, getDirection, getLastIndex, prevImage, stopSlideTimer, startSlideTimer, switchSlide };
   });
   
