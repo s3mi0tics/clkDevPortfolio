@@ -15,10 +15,10 @@ import '@fontsource/poppins/900.css';
 
 <template>
    <div class="app">
-     <nav>
+     <!-- <nav>
         <RouterLink to="/">home</RouterLink> |
         <RouterLink to="/about">About</RouterLink>
-      </nav>
+      </nav> -->
    </div>
   <RouterView />
 </template>
