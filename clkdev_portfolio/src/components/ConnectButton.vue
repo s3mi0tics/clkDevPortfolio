@@ -21,8 +21,8 @@ import IconMail from './icons/IconMail.vue';
     color: #ffffff;
     border-radius: 10px;
     position: absolute;
-    margin-left: 58%;
-    margin-top: 48%;
+
+    top: 655px;
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;

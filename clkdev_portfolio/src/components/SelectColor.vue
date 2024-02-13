@@ -62,8 +62,8 @@ const colorStore = useColorThemeStore()
 }
 .select-color {
     position: absolute;
-    margin-top: 41%;
-    margin-left: 58%;
+    top: 535px;
+
 }
 .text {
     color: #000000;

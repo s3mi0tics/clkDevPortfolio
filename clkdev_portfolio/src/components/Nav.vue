@@ -60,9 +60,10 @@ const pagesStore = usePagesStore()
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    margin-top: 4.4%;
+    margin-top: 53px;
     margin-left: 5%;
     margin-right: 4.2%;
+    top: 0px;
     font-size: 23px;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;

@@ -20,10 +20,12 @@ const colorStore = useColorThemeStore()
       <GreyArea />
       <Carousel />
       <Socials />
-      <InfoPanel />
-      <SelectSize />
-      <SelectColor />
-      <ConnectButton />
+      <div class="info-column">
+        <InfoPanel />
+        <SelectSize />
+        <SelectColor />
+        <ConnectButton />
+      </div>
     </div>
 </template>
   
@@ -32,16 +34,36 @@ const colorStore = useColorThemeStore()
   .card-background {
     display: flex;
     position: relative;
-    width: 1381px;
-    height: 847px;
+    top: 5%;
+    min-width: 95vw;
+    height: 95vh;
+    min-height: 715px;
     border-radius: 20px;
     box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
   }
-  
+  .info-column {
+    align-items: center;
+    position: absolute;
+    left: 46%;
+    transform: translateX(120px)
+  }
   .overlay-container {
     position: absolute;
     width: 100%;
     height: 100%;
   }
   
+  @media screen and (min-width: 601px) and (max-width: 767px) {
+    .card-background {
+      min-width: 95vh;
+      min-height: 600px; /* Adjust max-width for tablet screens */
+    }
+  }
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .info-column {
+    transform: translateX(5px)
+  }
+}
+
   </style>

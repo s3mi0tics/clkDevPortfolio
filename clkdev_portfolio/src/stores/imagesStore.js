@@ -11,7 +11,7 @@ const imageSets = {
       {
         img: 'profile.png', 
         alt: 'face profile', 
-        style: 'height: 86%; bottom: 0px; left:17%; cursor: pointer'
+        style: 'height: 80%; bottom: 0px; left:46%; transform: translateX(calc(-100% + 15px)); cursor: pointer'
       },  
     ],
   },  

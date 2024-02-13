@@ -35,6 +35,7 @@ const pageStore = usePagesStore()
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 .arrow-right {
     font-size: 2rem;
@@ -70,9 +71,11 @@ const pageStore = usePagesStore()
 }
 
 .info-panel {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    margin-top: 9%;
-    margin-left: 58%;
+    margin-top: 108px;
+
     width: 388px;
 }
 
