@@ -2,7 +2,6 @@ import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { usePagesStore } from './pagesStore';
 
-const screenshotStyle = 'height: 50%; width: 43.5%; border-radius: 6px; bottom: 30%; box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; cursor: pointer;'
 
 const imageSets = {
   home: {
@@ -11,7 +10,7 @@ const imageSets = {
       {
         img: 'profile.png', 
         alt: 'face profile', 
-        style: 'height: 80%; bottom: 0px; left:46%; transform: translateX(calc(-100% + 15px)); cursor: pointer'
+        class: 'profile',
       },  
     ],
   },  
@@ -20,7 +19,7 @@ const imageSets = {
       {
         img: 'openArms.png', 
         alt: 'photo of open arms',
-        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+        class: 'open-arms',
       }
     ],
   },
@@ -29,7 +28,7 @@ const imageSets = {
       {
         img: 'openArms.png', 
         alt: 'photo of open arms',
-        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+        class: 'open-arms',
       }
     ],
   },
@@ -38,7 +37,7 @@ const imageSets = {
       {
         img: 'openArms.png', 
         alt: 'photo of open arms',
-        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+        class: 'open-arms',
       }
     ],
   },
@@ -47,7 +46,7 @@ const imageSets = {
       {
         img: 'openArms.png', 
         alt: 'photo of open arms',
-        style: 'height: 72%; bottom: 0px; left: -15px; cursor: pointer'
+        class: 'open-arms',
       }
     ],
   },
@@ -57,20 +56,22 @@ const imageSets = {
       {
         img: 'opsHome.png',
         alt: 'screenshot showing home page',
-        style: screenshotStyle      },
+        class: 'ops-image',
+      },
       {
         img: 'opsNewJob.png',
         alt: 'screenshot showing new job modal',
-        style: screenshotStyle      },
+        class: 'ops-image',
+      },
       {
         img: 'opsJobDetails.png',
         alt: 'screenshot showing job details',
-        style: screenshotStyle
+        class: 'ops-image',
       },
       {
         img: 'opsSchedule.png',
         alt: 'screenshot showing the scheduling modal',
-        style: screenshotStyle
+        class: 'ops-image',
       }
     ]
   },

@@ -18,7 +18,7 @@ const getImgUrl = (name) => {
                 v-show="index === imageStore.getIndex" 
                 class="image" :src="getImgUrl(image.img)" 
                 :alt="image.alt" 
-                :style="image.style"
+                :class="image.class"
                 @mouseenter="imageStore.stopSlideTimer()"
                 @mouseout="imageStore.startSlideTimer()"
             /> 
@@ -57,5 +57,29 @@ const getImgUrl = (name) => {
 .slide-out-leave-to {
   transform: translateY(-100%);
   opacity: 0;
+}
+
+// images
+.profile {
+  height: 80%; 
+  bottom: 0px; 
+  left:46%; 
+  transform: translateX(calc(-100% + 15px)); 
+}
+
+.open-arms {
+  height: 72%; 
+  bottom: 0px;
+  transform: translateX(calc(-100% + 15px)); 
+}
+
+.ops-image {
+  height: 50%; 
+  width: 43.5%; 
+  border-radius: 6px; 
+  bottom: 30%; 
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
+  cursor: pointer;
+  transform: translateX(-20px)
 }
 </style>
