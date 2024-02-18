@@ -61,9 +61,7 @@ const colorStore = useColorThemeStore()
 
 }
 .select-color {
-    position: absolute;
-    top: 535px;
-
+    margin-top: 40px;
 }
 .text {
     color: #000000;
@@ -82,5 +80,8 @@ const colorStore = useColorThemeStore()
 .fe-block > * {
     text-align: start;
     color: white;
+}
+
+@media screen and (min-width: 425px) {
 }
 </style>

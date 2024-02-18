@@ -12,8 +12,10 @@ const store = useColorThemeStore()
 
 <style lang="scss" scoped>
 .grey-area {
+  top: 5%;
   width: 46%;
-  height: auto;
+  height: 90vh;
+  min-height: 90vh;
   background: #F2F4F6;
   border-radius: 20px 0 0 20px;
 }
@@ -23,9 +25,11 @@ const store = useColorThemeStore()
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff0000 0%, #ff0000 25%, #F2F4F6 25%, #F2F4F6 75%, #00ff00 75%, #00ff00 100%);
+    min-height: 600px;
+    height: 600px;
+    width: 100vw;
+    transform: skewY(20deg) translateY(calc(-325px));
+    border-radius: 0;
   }
 }
 </style>

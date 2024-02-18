@@ -1,66 +1,43 @@
 <script setup>
-import IconArrowRight from './icons/IconArrowRight.vue';
-import IconArrowLeft from './icons/IconArrowLeft.vue';
+import Arrows from './Arrows.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
 const colorStore = useColorThemeStore()
 import { usePagesStore } from '@/stores/pagesStore';
+import SelectSize from './SelectSize.vue';
+import SelectColor from './SelectColor.vue';
 const pageStore = usePagesStore()
 </script>
 
 <template>
     <div class="info-panel">
-        <h2 class="description" :style="{color: colorStore.getColorTheme.paragraph}">
-            {{pageStore.getPage.subtitle}}
+        <h2 class="description" :style="{ color: colorStore.getColorTheme.paragraph }">
+            {{ pageStore.getPage.subtitle }}
         </h2>
-        <h1 class="heading" :style="{color: colorStore.getColorTheme.title}">
-            {{pageStore.getPage.name}}
+        <h1 class="heading" :style="{ color: colorStore.getColorTheme.title }">
+            {{ pageStore.getPage.name }}
         </h1>
-        <h3 class="paragraph" :style="{color: colorStore.getColorTheme.paragraph}">
-            {{pageStore.getPage.paragraph}} <a :style="{color: colorStore.getColorTheme.socials}" href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
-        </h3>
-        <div class="arrows">
-            <div v-if="pageStore.getIndex > 0" class="arrow-left" @click="pageStore.previousPage(pageStore.getPage.id)">
-                <IconArrowLeft class="arrow-left" />
-            </div>
-            <div v-else></div>
-            <div v-if="pageStore.getIndex < pageStore.lastPage" class="arrow-right" @click="pageStore.nextPage(pageStore.getPage.id)">
-                <IconArrowRight class="arrow-right" />
-            </div>
+        <Arrows />
+        <div class="paragraph">
+            <h3 class="paragraph-text" :style="{ color: colorStore.getColorTheme.paragraph }">
+                {{ pageStore.getPage.paragraph }} <a :style="{ color: colorStore.getColorTheme.socials }"
+                    href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
+            </h3>
         </div>
+        <SelectSize />
+        <SelectColor />
     </div>
 </template>
 
 <style lang="scss" scoped>
-.arrows{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-.arrow-right {
-    font-size: 2rem;
-    color: #8B8D9A;
-    cursor: pointer;
-    padding-top: 0px;
-}
-.arrow-left {
-    font-size: 2rem;
-    color: #8B8D9A;
-    cursor: pointer;
-}
+
 .description {
     text-transform: uppercase;
-    font-family: Poppins, Arial; 
+    font-family: Poppins, Arial;
     font-size: 11.25pt;
     font-weight: 400;
     line-height: 21px;
 }
 
-.arrow-right {
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-}
 .heading {
     text-transform: uppercase;
     color: #000000;
@@ -70,32 +47,47 @@ const pageStore = usePagesStore()
     letter-spacing: 0.5px;
 }
 
-.info-panel {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-top: 108px;
-
-    width: 388px;
-}
 
 .paragraph {
-    height: 204px;
-    color: #8B8D9A;
+    height: min(204px, fit-content);
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.paragraph-text {
     text-decoration: none;
-    font-family: 'Poppins_20.0.0_google',Arial;
+    font-family: 'Poppins_20.0.0_google', Arial;
     font-size: 10.5pt;
     font-weight: 400;
     text-transform: none;
     line-height: 23px;
-    overflow: hidden;
-    overflow-x: hidden;
+    height: max(204px, fit-content);
 }
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: transparent;
+}
+
+@media screen and (max-width: 425px) {
+
+    .description {
+        font-size: 0.7rem;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 0.66rem;
+    }
+
+    .info-panel {
+        width: 70vw;
+    }
 }
 </style>

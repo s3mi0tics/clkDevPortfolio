@@ -32,6 +32,38 @@ const getImgUrl = (name) => {
     position: absolute;
 }
 
+
+// images------------------------
+.profile {
+  height: 80%; 
+  max-height: min(50vw, 80vh);
+  min-height: max(30vw, 50vh);
+  bottom: 0px;
+  left:46%; 
+  transform: translateX(calc(-100% + 15px)); 
+}
+
+.open-arms {
+  height: 72%; 
+  max-height: min(50vw, 80vh);
+  min-height: max(30vw, 50vh);
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(calc(-100% + 15px)); 
+}
+
+.ops-image {
+  height: 50%; 
+  width: 43.5%; 
+  border-radius: 6px; 
+  bottom: 30%; 
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
+  cursor: pointer;
+  transform: translateX(-20px)
+}
+
+// transitions------------------
+
 .slide-in-enter-active,
 .slide-in-leave-active,
 .slide-out-enter-active,
@@ -59,27 +91,51 @@ const getImgUrl = (name) => {
   opacity: 0;
 }
 
-// images
-.profile {
-  height: 80%; 
-  bottom: 0px; 
-  left:46%; 
-  transform: translateX(calc(-100% + 15px)); 
+@media screen and (max-width: 425px) {
+  .image {
+    position: static;
+    top: 0;
+    min-height: 300px;
+    height: 300px;
+    left: 20%;
+
+  }
+  // images---------------------------
+  .profile {
+    top: 0%;
+    transform: translateX(- 10vw); 
+    border-radius: 30px;
+  }
+  .open-arms {
+
 }
 
-.open-arms {
-  height: 72%; 
-  bottom: 0px;
-  transform: translateX(calc(-100% + 15px)); 
-}
+  // transitions----------------------
+  .slide-in-enter-active,
+  .slide-in-leave-active,
+  .slide-out-enter-active,
+  .slide-out-leave-active {
+    transition: all 1s ease-in-out;
+  }
 
-.ops-image {
-  height: 50%; 
-  width: 43.5%; 
-  border-radius: 6px; 
-  bottom: 30%; 
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
-  cursor: pointer;
-  transform: translateX(-20px)
+  .slide-in-enter-from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  .slide-in-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .slide-out-enter-from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .slide-out-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 </style>

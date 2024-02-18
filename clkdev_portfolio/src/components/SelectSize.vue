@@ -62,9 +62,7 @@ const store = useColorThemeStore()
 
 }
 .select-size {
-    position: absolute;
-    top: 445px;
-
+    margin-top: 30px;
 }
 .text {
     color: #000000;
