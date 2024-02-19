@@ -18,24 +18,24 @@ const store = useColorThemeStore()
         </div>
         <div class="size-icons">
             <div class="icon-stack">
-                <IconSquare style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
-                <IconComputer :style="{ fill: store.getColorTheme.socials}" />
+                <IconSquare class="square" :style="{ color: store.getColorTheme.star}" />
+                <IconComputer class="svg" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
-                <IconLaptop class="icon" :style="{ fill: store.getColorTheme.socials}" />
+                <IconSquare class="square" :style="{ color: store.getColorTheme.star}" />
+                <IconLaptop class="svg" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
-                <IconTablet class="icon" :style="{ fill: store.getColorTheme.socials}" />
+                <IconSquare class="square" :style="{ color: store.getColorTheme.star}" />
+                <IconTablet class="svg" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
-                <IconPhone class="icon" :style="{ fill: store.getColorTheme.socials}" />
+                <IconSquare class="square" :style="{ color: store.getColorTheme.star}" />
+                <IconPhone class="svg" :style="{ fill: store.getColorTheme.socials}" />
             </div>
             <div class="icon-stack">
-                <IconSquare class="square" style="font-size: 2.5rem;" :style="{ color: store.getColorTheme.star}" />
-                <IconWatch class="icon" :style="{ fill: store.getColorTheme.socials}" />
+                <IconSquare class="square" :style="{ color: store.getColorTheme.star}" />
+                <IconWatch class="svg" :style="{ fill: store.getColorTheme.socials}" />
             </div>
         </div>
     </div>
@@ -64,15 +64,39 @@ const store = useColorThemeStore()
 .select-size {
     margin-top: 30px;
 }
+.square {
+    font-size: 2.5rem;
+}
 .text {
     color: #000000;
     text-decoration: none;
     font-family: Poppins, Arial;
-    font-size: 10.5pt;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: none;
     line-height: 23px;
+}
+
+@media screen and (max-width: 425px) {
+    .icon-stack {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 30px
+    
+}
+    .square {
+        font-size: 2rem;
+    }
+    .text{
+        display: none;
+    }
+
+    .svg {
+        height: 14px;
+        width: auto;
+        stroke-width: 15px;
+    }
 }
 </style>
 

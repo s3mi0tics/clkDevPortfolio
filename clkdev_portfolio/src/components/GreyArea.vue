@@ -12,10 +12,10 @@ const store = useColorThemeStore()
 
 <style lang="scss" scoped>
 .grey-area {
-  top: 5%;
+  position: absolute;
   width: 46%;
   height: 90vh;
-  min-height: 90vh;
+  min-height: max(90vh, 656px);
   background: #F2F4F6;
   border-radius: 20px 0 0 20px;
 }
@@ -23,12 +23,10 @@ const store = useColorThemeStore()
 @media screen and (max-width: 425px) {
   .grey-area {
     position: absolute;
-    top: 0;
-    left: 0;
     min-height: 600px;
     height: 600px;
     width: 100vw;
-    transform: skewY(20deg) translateY(calc(-325px));
+    transform: skewY(20deg) translateY(calc(-380px));
     border-radius: 0;
   }
 }

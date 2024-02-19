@@ -9,27 +9,28 @@ const pageStore = usePagesStore()
 </script>
 
 <template>
-    <div class="info-panel">
-        <h2 class="description" :style="{ color: colorStore.getColorTheme.paragraph }">
-            {{ pageStore.getPage.subtitle }}
-        </h2>
-        <h1 class="heading" :style="{ color: colorStore.getColorTheme.title }">
-            {{ pageStore.getPage.name }}
-        </h1>
-        <Arrows />
-        <div class="paragraph">
-            <h3 class="paragraph-text" :style="{ color: colorStore.getColorTheme.paragraph }">
-                {{ pageStore.getPage.paragraph }} <a :style="{ color: colorStore.getColorTheme.socials }"
-                    href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
-            </h3>
+    <div class="info">
+        <div class="info-panel">
+            <h2 class="description" :style="{ color: colorStore.getColorTheme.paragraph }">
+                {{ pageStore.getPage.subtitle }}
+            </h2>
+            <h1 class="heading" :style="{ color: colorStore.getColorTheme.title }">
+                {{ pageStore.getPage.name }}
+            </h1>
+            <Arrows />
+            <div class="paragraph">
+                <h3 class="paragraph-text" :style="{ color: colorStore.getColorTheme.paragraph }">
+                    {{ pageStore.getPage.paragraph }} <a :style="{ color: colorStore.getColorTheme.socials }"
+                        href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
+                </h3>
+            </div>
         </div>
-        <SelectSize />
-        <SelectColor />
+            <SelectSize />
+            <SelectColor />
     </div>
 </template>
 
 <style lang="scss" scoped>
-
 .description {
     text-transform: uppercase;
     font-family: Poppins, Arial;
@@ -75,19 +76,26 @@ const pageStore = usePagesStore()
 @media screen and (max-width: 425px) {
 
     .description {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+        margin-top: 40px; 
     }
 
     .heading {
         font-size: 2rem;
+        margin-top: 0px;
     }
 
     .paragraph {
         font-size: 0.66rem;
     }
 
+    .info {
+        width: 90vw;
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .info-panel {
-        width: 70vw;
+        margin-top: 30px;
     }
 }
 </style>

@@ -25,21 +25,21 @@ const pagesStore = usePagesStore()
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                     <IconHome style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />           
                 </div> 
-                <p class="nav-description">home</p>
+                <p class="nav-description" :style="{ color: colorStore.getColorTheme.icon}">home</p>
             </div>
             <div class="nav-item middle-nav-item">
                 <div class="icon-stack" @click="pagesStore.changePageById('biography')">
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                     <IconPerson style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />      
                 </div> 
-                <p class="nav-description">bio</p>
+                <p class="nav-description" :style="{ color: colorStore.getColorTheme.icon}">bio</p>
             </div>
             <div class="nav-item">
                 <div class="icon-stack" @click="pagesStore.changePageById('portfolio')">
                     <IconCircle style="font-size: 2.75rem;" :style="{ color: colorStore.getColorTheme.area }" />
                     <IconSuitcase style="font-size: 1.5rem" :style="{ color: colorStore.getColorTheme.icon}" />     
                 </div> 
-                <p class="nav-description">portfolio</p>
+                <p class="nav-description" :style="{ color: colorStore.getColorTheme.icon}">portfolio</p>
             </div>
         </div> 
     </div>
@@ -69,13 +69,10 @@ const pagesStore = usePagesStore()
     margin: 0 35px 0 43px;
 }
 .nav {
-    position: absolute;
-    top: max(8%, 35px);
+    position: static;
     width: 90vw;
     display: flex;
     justify-content: space-between;
-    align-items: start;
-    padding-left: 5vw;
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
@@ -96,7 +93,7 @@ const pagesStore = usePagesStore()
 
 
 .title {
-    margin: 12px;
+    margin-left: 5vw;
     display: flex;
     align-items: baseline;
     text-transform: capitalize;
@@ -110,28 +107,27 @@ const pagesStore = usePagesStore()
 
 @media screen and (max-width: 425px) {
     .nav {
-        flex-direction: column-reverse;
-        align-items: baseline;
-    }
-    .title {
-        display: none;
-    }
-    .links {
-        justify-content: end;
-    }
-    .links {
-        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
         justify-content: center;
-        align-items: start;
+
     }
-    .nav {
-        position: static;
-        top: 54px;
-    }
-}
-@media screen and (max-height: 380px) {
     .title {
-        opacity: 0;
+        position: absolute;
+        align-items: baseline;
+        top: 390px;
+        left: 10px;
+        margin-left: 0;
     }
+    .links {
+        justify-content: center;
+        align-items: center;
+    }
+    .links {
+        width: 90%;
+    }
+
 }
+
 </style>
