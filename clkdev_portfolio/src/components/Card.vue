@@ -4,13 +4,11 @@ import GreyArea from './GreyArea.vue';
 import Nav from './Nav.vue';
 import Carousel from './Carousel.vue';
 import InfoPanel from './InfoPanel.vue';
-import Arrows from './Arrows.vue'
-import SelectSize from './SelectSize.vue';
 import Socials from './Socials.vue';
-import ConnectButton from './ConnectButton.vue';
-
 import { useColorThemeStore } from '@/stores/colorThemeStore';
+import { onMounted, watch } from 'vue';
 const colorStore = useColorThemeStore()
+
 </script>
 
 <template>
@@ -25,7 +23,8 @@ const colorStore = useColorThemeStore()
     <div class="card-info">
       <InfoPanel />
     </div>
-    </div>
+    <Socials />
+  </div>
 </template>
   
 
@@ -36,7 +35,7 @@ const colorStore = useColorThemeStore()
   width: 95vw;
   min-width: max(95vw, 610px);
   height: 90vh;
-  min-height: max(90vh, 480px);
+  min-height: max(90vh, fit-content);
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
   margin-top: 5vh;
@@ -52,13 +51,13 @@ const colorStore = useColorThemeStore()
   width: 90vw;
 }
 .card-info {
-  position: absolute;
-  top: max(8vh, 94px);
+  margin-top: max(8vh, 94px);
   min-width: 270px;
-  left: 50%;
+  margin-left: 50%;
   width: min(388px, 49%);
   height: fit-content;
 }
+
 
 
 @media screen and (max-width: 425px) {
@@ -87,7 +86,8 @@ const colorStore = useColorThemeStore()
   .card-info{
     position: static;
     min-width: 95vw;
-    margin-top: 20px;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .card-nav {

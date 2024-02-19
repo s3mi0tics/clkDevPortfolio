@@ -32,4 +32,11 @@ const store = useColorThemeStore()
 .socials > *:hover {
     background: none;
 }
+
+@media screen and (max-width: 425px) {
+    .socials{
+        right: 10px;
+        top: 70px;
+    }
+}
 </style>

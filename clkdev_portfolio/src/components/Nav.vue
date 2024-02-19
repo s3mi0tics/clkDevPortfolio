@@ -116,7 +116,7 @@ const pagesStore = usePagesStore()
     .title {
         position: absolute;
         align-items: baseline;
-        top: 390px;
+        top: 465px;
         left: 10px;
         margin-left: 0;
     }

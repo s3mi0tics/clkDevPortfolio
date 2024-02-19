@@ -5,6 +5,7 @@ const colorStore = useColorThemeStore()
 import { usePagesStore } from '@/stores/pagesStore';
 import SelectSize from './SelectSize.vue';
 import SelectColor from './SelectColor.vue';
+import ConnectButton from './ConnectButton.vue';
 const pageStore = usePagesStore()
 </script>
 
@@ -25,12 +26,23 @@ const pageStore = usePagesStore()
                 </h3>
             </div>
         </div>
+        <div class="select-size">
             <SelectSize />
+        </div>
+        <div class="select-color">
             <SelectColor />
+        </div>
+        <div class="connect-button">
+            <ConnectButton />
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.connect-button {
+    margin-top: 50px;
+}
+
 .description {
     text-transform: uppercase;
     font-family: Poppins, Arial;
@@ -47,7 +59,6 @@ const pageStore = usePagesStore()
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-
 
 .paragraph {
     height: min(204px, fit-content);
@@ -74,10 +85,14 @@ const pageStore = usePagesStore()
 }
 
 @media screen and (max-width: 425px) {
+    .connect-button {
+        margin-top: 25px;
+        align-self: center;
+    }
 
     .description {
         font-size: 0.9rem;
-        margin-top: 40px; 
+        margin-top: 40px;
     }
 
     .heading {
@@ -94,8 +109,12 @@ const pageStore = usePagesStore()
         display: flex;
         flex-direction: column-reverse;
     }
+
     .info-panel {
         margin-top: 30px;
     }
-}
-</style>
+
+    .select-color {
+        margin-top: 10px;
+    }
+}</style>

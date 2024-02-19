@@ -1,18 +1,16 @@
 <script setup>
 import { useImagesStore } from '@/stores/imagesStore';
 const imageStore = useImagesStore()
-console.log(imageStore.getIndex)
 
 const getImgUrl = (name) => {
     const imgUrl = new URL(`../assets/${name}`, import.meta.url).href;
-    console.log(imgUrl)
     return new URL(`../assets/${name}`, import.meta.url).href;
 };
 
 </script>
 
 <template>   
-    <div v-for="(image, index) in imageStore.getImageSet.images" :key="`${image.img}-${index}`">
+    <div class="images" v-for="(image, index) in imageStore.getImageSet.images" :key="`${image.img}-${index}`">
         <transition :name="imageStore.getDirection">
             <img 
                 v-show="index === imageStore.getIndex" 
@@ -28,9 +26,9 @@ const getImgUrl = (name) => {
 
 
 <style lang="scss" scoped>
+
 .image {
     position: absolute;
- 
 }
 
 
@@ -54,13 +52,13 @@ const getImgUrl = (name) => {
 }
 
 .ops-image {
-  height: 50%; 
-  width: 43.5%; 
+  width: 46%; 
+  height: auto; 
   border-radius: 6px; 
-  bottom: 30%; 
-  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
+  bottom: 20%; 
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); 
   cursor: pointer;
-  transform: translateX(-20px)
+  margin: 10px;
 }
 
 // transitions------------------
@@ -99,8 +97,6 @@ const getImgUrl = (name) => {
     min-height: 200px;
     height: 300px;
     left: 20%;
-
-
   }
   // images---------------------------
   .profile {
@@ -110,7 +106,19 @@ const getImgUrl = (name) => {
   .open-arms {
     transform: translateX(-0px);
     border-radius: 50px;
-}
+  }
+  .ops-image {
+    height: 15vh; 
+    width: auto;
+    border-radius: 6px; 
+    bottom: 0;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
+    cursor: pointer;
+    z-index: 20;
+  }
+
+
+
 
   // transitions----------------------
   .slide-in-enter-active,

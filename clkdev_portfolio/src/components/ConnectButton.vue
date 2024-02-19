@@ -20,9 +20,6 @@ import IconMail from './icons/IconMail.vue';
     background-color: #000000;
     color: #ffffff;
     border-radius: 10px;
-    position: absolute;
-
-    top: 655px;
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
@@ -33,7 +30,6 @@ import IconMail from './icons/IconMail.vue';
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .h7 {
