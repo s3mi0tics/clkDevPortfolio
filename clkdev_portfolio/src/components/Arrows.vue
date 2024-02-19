@@ -10,11 +10,11 @@ const pageStore = usePagesStore()
 <template>
     <div class="arrows">
         <div v-if="pageStore.getIndex > 0" @click="pageStore.previousPage(pageStore.getPage.id)">
-            <IconArrowLeft class="arrow-left" :style="{ color: colorStore.getColorTheme.paragraph }"/>
+            <IconArrowLeft class="arrow-left" :style="{ color: colorStore.getColorTheme.star }"/>
         </div>
         <div v-else></div>
         <div v-if="pageStore.getIndex < pageStore.lastPage" @click="pageStore.nextPage(pageStore.getPage.id)">
-            <IconArrowRight class="arrow-right" :style="{ color: colorStore.getColorTheme.paragraph }"/>
+            <IconArrowRight class="arrow-right" :style="{ color: colorStore.getColorTheme.star }"/>
         </div>
     </div>
 </template>
@@ -22,7 +22,7 @@ const pageStore = usePagesStore()
 <style lang="scss" scoped>
 .arrows {
     top: 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
