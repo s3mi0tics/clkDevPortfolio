@@ -30,6 +30,7 @@ const getImgUrl = (name) => {
 <style lang="scss" scoped>
 .image {
     position: absolute;
+ 
 }
 
 
@@ -37,7 +38,7 @@ const getImgUrl = (name) => {
 .profile {
   height: 80%; 
   max-height: min(50vw, 80vh);
-  min-height: max(30vw, 50vh);
+  min-height: max(30vw, 50vh, 340px);
   bottom: 0px;
   left:46%; 
   transform: translateX(calc(-100% + 15px)); 
@@ -95,19 +96,20 @@ const getImgUrl = (name) => {
   .image {
     position: static;
     top: 0;
-    min-height: 300px;
+    min-height: 200px;
     height: 300px;
     left: 20%;
+
 
   }
   // images---------------------------
   .profile {
-    top: 0%;
-    transform: translateX(- 10vw); 
+    transform: translateX(-15px);
     border-radius: 30px;
   }
   .open-arms {
-
+    transform: translateX(-0px);
+    border-radius: 50px;
 }
 
   // transitions----------------------
