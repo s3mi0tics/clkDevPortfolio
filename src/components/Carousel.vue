@@ -54,11 +54,14 @@ const getImgUrl = (name) => {
 .ops-image {
   width: 46%; 
   height: auto; 
+  max-width: min(70vh);
   border-radius: 6px; 
-  bottom: 20%; 
+  top: 20%; 
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); 
   cursor: pointer;
   margin: 10px;
+  left: 46%;
+  transform: translateX(calc(-100% + 15px))
 }
 
 // transitions------------------
