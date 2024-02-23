@@ -99,7 +99,7 @@ const store = useColorThemeStore()
     }
 }
 
-@media screen and (max-height: 630px) {
+@media screen and (max-height: 800px) {
   .text {
         display: none
     }

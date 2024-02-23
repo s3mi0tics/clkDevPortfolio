@@ -34,7 +34,7 @@ const colorStore = useColorThemeStore()
   width: 95vw;
   min-width: max(95vw, 610px);
   height: 90vh;
-  min-height: max(90vh, 500px);
+  min-height: max(90vh, 660px);
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
   margin-top: 5vh;
@@ -51,9 +51,8 @@ const colorStore = useColorThemeStore()
 }
 .card-info {
   margin-top: max(8vh, 94px);
-  min-width: 270px;
   margin-left: 50%;
-  width: min(388px, 49%);
+  width: min(388px, 45%);
   height: fit-content;
 }
 
@@ -98,9 +97,15 @@ const colorStore = useColorThemeStore()
     height: 200px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .card-nav {
       top: 40px;
     }
   }
+@media screen and (max-width: 870px) {
+    .card-background {
+      min-height: 810px;
+    }
+  }
+
 </style>
