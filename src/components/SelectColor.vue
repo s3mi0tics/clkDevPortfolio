@@ -94,8 +94,14 @@ const colorStore = useColorThemeStore()
         font-size: 1.3rem;
     }
     .icon-stack {
-    margin-left: 10px;
-    margin-right: 30px 
+        margin-left: 10px;
+        margin-right: 30px 
+    }
 }
+
+@media screen and (max-height: 630px) {
+  .text {
+        display: none
+    }
 }
 </style>

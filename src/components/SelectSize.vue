@@ -98,5 +98,11 @@ const store = useColorThemeStore()
         stroke-width: 15px;
     }
 }
+
+@media screen and (max-height: 630px) {
+  .text {
+        display: none
+    }
+}
 </style>
 

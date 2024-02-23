@@ -15,7 +15,7 @@ const store = useColorThemeStore()
   position: absolute;
   width: 46%;
   height: 90vh;
-  min-height: max(90vh, 480px);
+  min-height: max(90vh, 550px);
   background: #F2F4F6;
   border-radius: 20px 0 0 20px;
 }

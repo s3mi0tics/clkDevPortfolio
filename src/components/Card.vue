@@ -35,7 +35,7 @@ const colorStore = useColorThemeStore()
   width: 95vw;
   min-width: max(95vw, 610px);
   height: 90vh;
-  min-height: max(90vh, fit-content);
+  min-height: max(90vh, 500px);
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(64, 64, 64, 0.2);
   margin-top: 5vh;
@@ -99,4 +99,9 @@ const colorStore = useColorThemeStore()
     height: 200px;
   }
 }
+@media screen and (max-width: 800px) {
+    .card-nav {
+      top: 40px;
+    }
+  }
 </style>

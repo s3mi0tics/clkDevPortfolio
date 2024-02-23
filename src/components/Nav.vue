@@ -123,11 +123,10 @@ const pagesStore = usePagesStore()
     .links {
         justify-content: center;
         align-items: center;
-    }
-    .links {
         width: 90%;
     }
 
 }
+
 
 </style>
