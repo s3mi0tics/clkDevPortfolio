@@ -30,7 +30,7 @@ const pages = [
     subtitle: 'designer',
     title: 'biography',
     name: 'colby kauk',
-    paragraph: "I embarked on a self-study mission, navigating LeetCode's explore cards, diving into Outsystems courses, and actively engaging in building applications. Seeking a deeper understanding, I enrolled in CS50, Harvard's Introduction to Computer Science, to unveil the what is happing 'under the hood'."
+    paragraph: "I embarked on a self-study mission, navigating LeetCode's explore cards, diving into Outsystems courses, and actively engaging in building applications. Seeking a deeper understanding, I enrolled in CS50, Harvard's Introduction to Computer Science, to unveil the what is happening 'under the hood'."
   },
   {
     id: 'biography4',
