@@ -97,7 +97,7 @@ const getImgUrl = (name) => {
     border-radius: 50px;
   }
   .ops-image {
-    min-height: 10vh;
+    min-height: 15vh;
     height: 20vh; 
     bottom: 0;
     left: 0;
