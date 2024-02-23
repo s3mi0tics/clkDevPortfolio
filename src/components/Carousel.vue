@@ -52,11 +52,9 @@ const getImgUrl = (name) => {
 }
 
 .ops-image {
-  width: 46%; 
-  height: auto; 
-  max-width: min(70vh);
+  height: min(55%, 30vw); 
   border-radius: 6px; 
-  top: 20%; 
+  bottom: 23%;
   box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); 
   cursor: pointer;
   margin: 10px;
@@ -70,28 +68,16 @@ const getImgUrl = (name) => {
 .slide-in-leave-active,
 .slide-out-enter-active,
 .slide-out-leave-active {
-  transition: all 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
-.slide-in-enter-from {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.slide-in-leave-to {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
-.slide-out-enter-from {
-  transform: translateY(100%);
-  opacity: 0;
-}
-
+.slide-in-enter-from,
+.slide-in-leave-to,
+.slide-out-enter-from,
 .slide-out-leave-to {
-  transform: translateY(-100%);
   opacity: 0;
 }
+
 
 @media screen and (max-width: 425px) {
   .image {
@@ -111,45 +97,16 @@ const getImgUrl = (name) => {
     border-radius: 50px;
   }
   .ops-image {
-    height: 15vh; 
-    width: auto;
-    border-radius: 6px; 
+    min-height: 10vh;
+    height: 20vh; 
     bottom: 0;
+    left: 0;
+    border-radius: 6px; 
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
     cursor: pointer;
-    transform: translateX(100% -15px);
+    transform: translateX(0%);
 
   }
 
-
-
-
-  // transitions----------------------
-  .slide-in-enter-active,
-  .slide-in-leave-active,
-  .slide-out-enter-active,
-  .slide-out-leave-active {
-    transition: all 1s ease-in-out;
-  }
-
-  .slide-in-enter-from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  .slide-in-leave-to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  .slide-out-enter-from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  .slide-out-leave-to {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
 }
 </style>
