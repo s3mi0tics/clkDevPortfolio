@@ -18,6 +18,8 @@ const store = useColorThemeStore()
 
 <style lang="scss" scoped>
 .socials {
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     position: absolute;

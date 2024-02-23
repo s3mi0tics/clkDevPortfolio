@@ -6,7 +6,6 @@ import Carousel from './Carousel.vue';
 import InfoPanel from './InfoPanel.vue';
 import Socials from './Socials.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
-import { onMounted, watch } from 'vue';
 const colorStore = useColorThemeStore()
 
 </script>
@@ -64,7 +63,7 @@ const colorStore = useColorThemeStore()
   .card-background {
     min-width: 0;
     margin: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     min-height: 100%;
     display: flex;

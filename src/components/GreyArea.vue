@@ -14,8 +14,7 @@ const store = useColorThemeStore()
 .grey-area {
   position: absolute;
   width: 46%;
-  height: 90vh;
-  min-height: max(90vh, 550px);
+  height: 100%;
   background: #F2F4F6;
   border-radius: 20px 0 0 20px;
 }
@@ -30,4 +29,5 @@ const store = useColorThemeStore()
     border-radius: 0;
   }
 }
+
 </style>
