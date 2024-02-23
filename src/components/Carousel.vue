@@ -117,7 +117,8 @@ const getImgUrl = (name) => {
     bottom: 0;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
     cursor: pointer;
-    z-index: 20;
+    transform: translateX(100% -15px);
+
   }
 
 
