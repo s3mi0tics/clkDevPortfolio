@@ -36,7 +36,7 @@ const getImgUrl = (name) => {
 .profile {
   height: 80%; 
   max-height: min(50vw, 80vh);
-  min-height: max(30vw, 50vh, 340px);
+  min-height: max(30vw, 50vh);
   bottom: 0px;
   left:46%; 
   transform: translateX(calc(-100% + 15px)); 
