@@ -77,6 +77,12 @@ const getImgUrl = (name) => {
 .slide-out-leave-to {
   opacity: 0;
 }
+@media screen and (max-width: 870px) {
+    .image {
+      position: fixed;
+      bottom: 0;
+    }
+  }
 
 
 @media screen and (max-width: 425px) {
@@ -109,4 +115,5 @@ const getImgUrl = (name) => {
   }
 
 }
+
 </style>
