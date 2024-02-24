@@ -103,6 +103,9 @@ const store = useColorThemeStore()
   .text {
         display: none
     }
+    .select-size {
+        display: none;
+    }
 }
 </style>
 

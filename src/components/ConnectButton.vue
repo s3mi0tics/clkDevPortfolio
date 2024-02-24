@@ -6,10 +6,12 @@ import IconMail from './icons/IconMail.vue';
 </script>
 
 <template>
-<button id="connect-button">
-    <IconMail  class="me-2" style="font-size: 1.25rem" />
-    <div class="h7">Connect with me!</div>
-</button>
+    <a class="anchor" href="mailto:colby.kauk@gmail.com">
+        <button id="connect-button">
+            <IconMail  class="me-2" style="font-size: 1.25rem" />
+            <div class="h7">Connect with me!</div>
+        </button>
+    </a>
 </template>
 
 <style lang="scss" scoped>
@@ -30,10 +32,16 @@ import IconMail from './icons/IconMail.vue';
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+.anchor {
+    text-decoration: none; 
+    display: inline-block;
 }
 
 .h7 {
-    font-size: 0.5;
+    font-size: 1rem;
+
 }
 
 </style>
