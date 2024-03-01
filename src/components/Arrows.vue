@@ -31,11 +31,14 @@ const pageStore = usePagesStore()
 
 .arrow-right {
     cursor: pointer;
-
+    width: 30px;
+    height: 33px;
 }
 
 .arrow-left {
     cursor: pointer;
+    width: 30px;
+    height: 33px;
 
 }
 

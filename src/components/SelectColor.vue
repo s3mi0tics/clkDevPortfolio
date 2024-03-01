@@ -37,9 +37,7 @@ const colorStore = useColorThemeStore()
 .icon-circle {
     font-size: 2.5rem;
 }
-
 .icon-check {
-    font-size: 1.75rem;
     color: white;
 } 
 .icon-stack {
@@ -64,9 +62,10 @@ const colorStore = useColorThemeStore()
 .text {
     color: #000000;
     text-decoration: none;
-    font-family: Poppins, Arial;
+    font-family: 'Poppins', Arial;
     font-size: 0.9rem;
     font-weight: 500;
+    font-style: normal;
     letter-spacing: 0.5px;
     text-transform: none;
     line-height: 23px;
@@ -88,10 +87,12 @@ const colorStore = useColorThemeStore()
         display: none;
     }
     .icon-circle {
-        font-size: 1.75rem;
+        width: 28px;
+        height: 28px;
     }
     .icon-check {
-        font-size: 1.3rem;
+        width: 20px;
+        height: 20px;
     }
     .icon-stack {
         margin-left: 10px;

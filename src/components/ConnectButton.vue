@@ -28,20 +28,24 @@ import IconMail from './icons/IconMail.vue';
     font-family: 'Poppins', Arial;
     font-size: 10.5pt;
     font-weight: 400;
+    font-style: normal;
     text-transform: none;
     display: flex;
     justify-content: center;
     align-items: center;
 
+
+}
+
+
+.h7 {
+    font-size: 1rem;
+    margin-left: 5px;
+
 }
 .anchor {
     text-decoration: none; 
     display: inline-block;
-}
-
-.h7 {
-    font-size: 1rem;
-
 }
 
 </style>

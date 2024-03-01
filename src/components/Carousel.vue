@@ -82,6 +82,10 @@ const getImgUrl = (name) => {
       position: fixed;
       bottom: 0;
     }
+    .ops-image {
+      position: absolute;
+      bottom: 23%;
+    }
   }
 
 

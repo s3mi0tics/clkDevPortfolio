@@ -3,7 +3,6 @@ import Arrows from './Arrows.vue';
 import { useColorThemeStore } from '@/stores/colorThemeStore';
 const colorStore = useColorThemeStore()
 import { usePagesStore } from '@/stores/pagesStore';
-import SelectSize from './SelectSize.vue';
 import SelectColor from './SelectColor.vue';
 import ConnectButton from './ConnectButton.vue';
 const pageStore = usePagesStore()
@@ -27,7 +26,6 @@ const pageStore = usePagesStore()
             </div>
         </div>
         <div class="select-size">
-            <SelectSize />
         </div>
         <div class="select-color">
             <SelectColor />
@@ -45,18 +43,20 @@ const pageStore = usePagesStore()
 
 .description {
     text-transform: uppercase;
-    font-family: Poppins, Arial;
+    font-family: 'Poppins', Arial;
     font-size: 11.25pt;
     font-weight: 400;
+    font-style: normal;
     line-height: 21px;
 }
 
 .heading {
     text-transform: uppercase;
     color: #000000;
-    font-family: Poppins, Ariel;
+    font-family: 'Poppins', Ariel;
     font-size: 31.5pt;
     font-weight: 600;
+    font-style: normal;
     letter-spacing: 0.5px;
 }
 
@@ -68,9 +68,10 @@ const pageStore = usePagesStore()
 
 .paragraph-text {
     text-decoration: none;
-    font-family: 'Poppins_20.0.0_google', Arial;
+    font-family: 'Poppins', Arial;
     font-size: 10.5pt;
     font-weight: 400;
+    font-style: normal;
     text-transform: none;
     line-height: 23px;
     height: max(204px, fit-content);
