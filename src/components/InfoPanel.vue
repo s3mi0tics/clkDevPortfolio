@@ -6,6 +6,7 @@ import { usePagesStore } from '@/stores/pagesStore';
 import SelectColor from './SelectColor.vue';
 import ConnectButton from './ConnectButton.vue';
 const pageStore = usePagesStore()
+console.log(pageStore.getPage.link)
 </script>
 
 <template>
@@ -20,8 +21,9 @@ const pageStore = usePagesStore()
             <Arrows />
             <div class="paragraph">
                 <h3 class="paragraph-text" :style="{ color: colorStore.getColorTheme.paragraph }">
-                    {{ pageStore.getPage.paragraph }} <a :style="{ color: colorStore.getColorTheme.socials }"
-                        href="https://github.com/s3mi0tics/installOps">{{ pageStore.getPage.link }}</a>
+                    {{ pageStore.getPage.paragraph }} 
+                    <a v-if="pageStore.getPage.link" :style="{ color: colorStore.getColorTheme.socials }"
+                        :href="pageStore.getPage.link">Explore the code here</a>
                 </h3>
             </div>
         </div>

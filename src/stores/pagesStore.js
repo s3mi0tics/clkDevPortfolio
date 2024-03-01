@@ -45,7 +45,15 @@ const pages = [
     title: 'portfolio',
     name: 'installOps',
     paragraph: 'This is my final project for Harvard’s CS50. InstallOps is a Helpdesk web application designed to help a manager schedule the deliveries of products and services of a blind installation operation. The tech stack used includes Python, leveraging the Flask framework for a robust backend. Stylishly designed using Bootstrap, ensuring a seamless and responsive user interface. Executed with all custom SQLite3 schema, tables, and queries showcasing a mastery of database fundamentals.',
-    link: 'Explore the code here'
+    link: 'https://github.com/s3mi0tics/installOps'
+  },
+  {
+    id: 'portfolio2',
+    subtitle: 'Front-end, CSS, HTML, Vue3.js',
+    title: 'portfolio',
+    name: 'Portfolio Site',
+    paragraph: 'Welcome to my personal portfolio—a responsive website with custom color schemes, HTML, CSS, and JavaScript, powered by Vue3.js and Vite. Designed initially from a template, it served as an exercise in enhancing my skills and understanding of front-end technologies. Utilizing a Pinia store for dynamic content and states, this portfolio is deployed as a secure, public HTTPS site using AWS CloudFront and an S3 bucket.',
+    link: 'https://github.com/s3mi0tics/clkDevPortfolio'
   }
 ]
 
