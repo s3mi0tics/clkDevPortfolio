@@ -60,7 +60,7 @@ const pages = [
     subtitle: 'MERN, Material UI, Redux, Nivo',
     title: 'portfolio',
     name: 'MERN Admin',
-    paragraph: 'This application encompasses various features, including a dynamic dashboard with statistics and charts, product management with detailed listings, customer information tables, server-side pagination for transactions, and a geographical overview of user locations. Utilizing technologies such as nivo for charts, Material UI for styling, and Redux Toolkit for state management, the frontend delivers an engaging user experience. The backend is powered by NodeJS and ExpressJS, and it integrates with a MongoDB cloud instance for efficient and scalable data management, leveraging the Mongoose library for MongoDB interactions. This setup ensures robust data storage, retrieval, and manipulation capabilities, contributing to the overall performance and reliability of the application.',
+    paragraph: 'This application encompasses various features, including a dynamic dashboard with statistics and charts, product management with detailed listings, customer information tables, server-side pagination for transactions, and a geographical overview of user locations. Utilizing technologies such as nivo for charts, Material UI for styling, and Redux Toolkit for state management, the frontend delivers an engaging user experience. The backend is powered by NodeJS and ExpressJS, and it integrates with a MongoDB cloud instance, leveraging the Mongoose library for MongoDB interactions.',
     link: 'https://github.com/s3mi0tics/MERN_Admin_Dashboard'
   }
 ]
