@@ -120,7 +120,7 @@ const pagesStore = usePagesStore()
     .title {
         position: absolute;
         align-items: baseline;
-        top: 410px;
+        top: 400px;
         left: 10px;
         margin-left: 0;
     }

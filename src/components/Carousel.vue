@@ -39,7 +39,6 @@ const getImgUrl = (name) => {
   bottom: 0px;
   left:46%; 
   transform: translateX(calc(-100% + 15px));
-  filter: drop-shadow(10px 10px 10px rgba(64, 64, 64, 0.2)); 
 }
 
 .open-arms {
@@ -49,7 +48,6 @@ const getImgUrl = (name) => {
   bottom: 0px;
   left: 50%;
   transform: translateX(-100%); 
-  filter: drop-shadow(10px 10px 10px rgba(64, 64, 64, 0.2));
 }
 
 .screenshot {
@@ -100,7 +98,7 @@ const getImgUrl = (name) => {
   }
   // images---------------------------
   .profile {
-    transform: translateX(-15px);
+    transform: translateX(-15px) translateY(10px);
     border-radius: 30px;
   }
   .open-arms {
@@ -113,7 +111,6 @@ const getImgUrl = (name) => {
     bottom: 0;
     left: 0;
     border-radius: 6px; 
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2); left: 5%; 
     cursor: pointer;
     transform: translateX(0%);
 
