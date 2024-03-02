@@ -6,7 +6,7 @@ import IconMail from './icons/IconMail.vue';
 </script>
 
 <template>
-    <a class="anchor" href="mailto:colby.kauk@gmail.com">
+    <a target="_blank" class="anchor" href="mailto:colby.kauk@gmail.com">
         <button id="connect-button">
             <IconMail  class="me-2" style="font-size: 1.25rem" />
             <div class="h7">Connect with me!</div>

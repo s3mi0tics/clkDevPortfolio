@@ -22,7 +22,7 @@ console.log(pageStore.getPage.link)
             <div class="paragraph">
                 <h3 class="paragraph-text" :style="{ color: colorStore.getColorTheme.paragraph }">
                     {{ pageStore.getPage.paragraph }} 
-                    <a v-if="pageStore.getPage.link" :style="{ color: colorStore.getColorTheme.socials }"
+                    <a target="_blank" v-if="pageStore.getPage.link" :style="{ color: colorStore.getColorTheme.socials }"
                         :href="pageStore.getPage.link">Explore the code here</a>
                 </h3>
             </div>
