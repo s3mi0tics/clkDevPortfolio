@@ -1,4 +1,3 @@
-
 <script setup>
 import IconMail from './icons/IconMail.vue';
 
@@ -6,16 +5,17 @@ import IconMail from './icons/IconMail.vue';
 </script>
 
 <template>
-    <a target="_blank" class="anchor" href="mailto:colby.kauk@gmail.com">
-        <button id="connect-button">
-            <IconMail  class="me-2" style="font-size: 1.25rem" />
-            <div class="h7">Connect with me!</div>
-        </button>
-    </a>
+    <div class="connect">
+        <a target="_blank" class="anchor" href="mailto:colby.kauk@gmail.com">
+            <button id="connect-button">
+                <IconMail class="me-2" style="font-size: 1.25rem" />
+                <div class="h7">Connect with me!</div>
+            </button>
+        </a>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-
 #connect-button {
     width: 233px;
     height: 48px;
@@ -33,19 +33,17 @@ import IconMail from './icons/IconMail.vue';
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    box-shadow: 4px 4px 4px rgba(64, 64, 64, 0.2);
 }
-
 
 .h7 {
     font-size: 1rem;
     margin-left: 5px;
 
 }
+
 .anchor {
-    text-decoration: none; 
+    text-decoration: none;
     display: inline-block;
 }
-
 </style>

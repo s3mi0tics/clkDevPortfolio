@@ -38,7 +38,8 @@ const getImgUrl = (name) => {
   min-height: max(30vw, 50vh);
   bottom: 0px;
   left:46%; 
-  transform: translateX(calc(-100% + 15px)); 
+  transform: translateX(calc(-100% + 15px));
+  filter: drop-shadow(10px 10px 10px rgba(64, 64, 64, 0.2)); 
 }
 
 .open-arms {
@@ -47,7 +48,8 @@ const getImgUrl = (name) => {
   min-height: max(30vw, 50vh);
   bottom: 0px;
   left: 50%;
-  transform: translateX(calc(-100% + 15px)); 
+  transform: translateX(-100%); 
+  filter: drop-shadow(10px 10px 10px rgba(64, 64, 64, 0.2));
 }
 
 .screenshot {

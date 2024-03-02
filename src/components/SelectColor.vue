@@ -36,6 +36,7 @@ const colorStore = useColorThemeStore()
 <style lang="scss" scoped>
 .icon-circle {
     font-size: 2.5rem;
+    filter: drop-shadow(4px 4px 4px rgba(64, 64, 64, 0.2));
 }
 .icon-check {
     color: white;
