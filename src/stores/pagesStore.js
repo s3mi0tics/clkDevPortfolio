@@ -16,7 +16,7 @@ const pages = [
     subtitle: 'programmer',
     title: 'biography',
     name: 'colby kauk',
-    paragraph: 'I am a determined full-stack developer proficient in Python, Java, React, mySQL, and mongoDB. Gritty and diligent engineer focused on growth, with a  willingness to learn and a curiosity to gain a deeper understanding of technologies. Skilled problem solver able to self-manage during independent projects and collaborate in a team setting. ',
+    paragraph: 'I am a process-oriented full-stack developer proficient in Python, Java, Vue.js, React, MySQL, and MongoDB. Gritty and diligent engineer focused on growth and good habits, with a curiosity to gain a deeper understanding of technologies. Skilled problem solver, able to self-manage during independent projects and collaborate in a team setting.',
   },
   {
     id: 'biography2',
@@ -52,7 +52,7 @@ const pages = [
     subtitle: 'Front-end, CSS, HTML, Vue3.js',
     title: 'portfolio',
     name: 'Portfolio Site',
-    paragraph: 'Welcome to my personal portfolio—a responsive website with custom color schemes, HTML, CSS, and JavaScript, powered by Vue3.js and Vite. Designed initially from a template, it served as an exercise in enhancing my skills and understanding of front-end technologies. Utilizing a Pinia store for dynamic content and states, this portfolio is deployed as a secure, public HTTPS site using AWS CloudFront and an S3 bucket.',
+    paragraph: 'Welcome to my personal portfolio—a responsive website with custom color schemes, HTML, CSS, and JavaScript, powered by Vue3.js and Vite. Designed initially from a template, it served as an exercise in enhancing my skills and understanding of front-end technologies. Utilizing a Pinia store for dynamic content and state management. This portfolio is deployed as a secure, public HTTPS site using AWS CloudFront and an S3 bucket.',
     link: 'https://github.com/s3mi0tics/clkDevPortfolio'
   },
   {
